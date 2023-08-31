@@ -6,12 +6,14 @@ export default function Form(onAddActivity) {
       checkboxInput: event.target[1].checked,
     };
     onAddActivity(activityObject);
+    event.target.reset();
+    event.target[0].focus();
   }
 
   return (
     <form onSubmit={handleSubmit}>
       <h3>Add new Activity</h3>
-      <label htmlFor="activityInput">New Activity</label>
+      <label htmlFor="activityInput">New Activity:</label>
       <input type="text" name="activityInput" id="activityInput" />
       <label htmlFor="checkboxInput">...is for Good Weather</label>
       <input type="checkbox" name="checkboxInput" id="checkboxInput" />
