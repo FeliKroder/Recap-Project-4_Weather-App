@@ -1,10 +1,11 @@
 export default function Form(onAddActivity) {
   function handleSubmit(event) {
     event.preventDefault();
-    // const activityInput = event.target.name.value;
-    // const checkboxInput =
-    console.log(event.target[0].value);
-    // const activityObject = { name: activityInput };
+    const activityObject = {
+      name: event.target[0].value,
+      checkboxInput: event.target[1].checked,
+    };
+    onAddActivity(activityObject);
   }
 
   return (
