@@ -1,4 +1,4 @@
-export default function Form(onAddActivity) {
+export default function Form({ onAddActivity }) {
   function handleSubmit(event) {
     event.preventDefault();
     const activityObject = {
